@@ -37,11 +37,15 @@ html {
 }
 
 .navlink {
-  margin-right: 50px;
+  margin-right: 60px;
   justify-content: center;
   align-items: center;
 }
 
 .homelink {
-  margin-left: 100px;
+  margin-left: 130px;
+}
+
+#link-a{
+  color: #777;
 }
