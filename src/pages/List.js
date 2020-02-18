@@ -37,14 +37,19 @@ export default function List() {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                {bills.map(bill => (
-                                    <tr key={bill._id}>
-                                        <td className="column1">{bill.provider_name}</td>
-                                        <td className="column2">{bill.expiration_date}</td>
-                                        <td className="column3">R${bill.amount}</td>
-                                        <td className="column4">Pago</td>
-                                        <td className="column6"><a href={`https://megahack2020.herokuapp.com/api/download/${bill._id}`} target="_blank" rel="noopener noreferrer" >Baixar PDF</a></td>
-                                    </tr>))}
+                                {bills.map(bill => {
+
+                                     
+
+                                    return(
+                                        <tr key={bill._id}>
+                                            <td className="column1">{bill.provider_name}</td>
+                                            <td className="column2">{bill.expiration_date}</td>
+                                            <td className="column3">R${parseFloat(bill.amount).toFixed(2)}</td>
+                                            <td className="column4">À pagar</td>
+                                            <td className="column6"><a href={`https://megahack2020.herokuapp.com/api/download/${bill._id}`} target="_blank" rel="noopener noreferrer" >Baixar PDF</a></td>
+                                        </tr>
+                                    )})}
                                 </tbody>
                             </table>
                         </div>
@@ -53,12 +58,4 @@ export default function List() {
             </div>
         </div>
         )
-}
-
-function dataForm(){
-    var data = new Date(),
-        dia  = data.getDate().toString().padStart(2, '0'),
-        mes  = (data.getMonth()+1).toString().padStart(2, '0'), //+1 pois no getMonth Janeiro começa com zero.
-        ano  = data.getFullYear();
-    return dia+"/"+mes+"/"+ano;
 }
