@@ -43,7 +43,7 @@ export default function List() {
                                         <td className="column2">{bill.expiration_date}</td>
                                         <td className="column3">R${bill.amount}</td>
                                         <td className="column4">Pago</td>
-                                        <td className="column6">Baixar PDF</td>
+                                        <td className="column6"><a href={`https://megahack2020.herokuapp.com/api/download/${bill._id}`} target="_blank" rel="noopener noreferrer" >Baixar PDF</a></td>
                                     </tr>))}
                                 </tbody>
                             </table>
