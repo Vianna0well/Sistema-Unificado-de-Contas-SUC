@@ -6,3 +6,42 @@ html {
   max-width: 980px;
   margin: 0 auto;
 }
+
+.banner {
+  background: #fff;
+  font-family: Lato, sans-serif;
+}
+.navbar-nav-primary {
+  text-transform: uppercase;
+}
+
+.form-control {
+  width: 250px;
+}
+
+.btn {
+  border: 0;
+  background: transparent;
+  font-size: 18px;
+}
+
+.navbarPrincipal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-nav-primary {
+  display: flex;
+  flex-direction: row;
+}
+
+.navlink {
+  margin-right: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.homelink {
+  margin-left: 100px;
+}

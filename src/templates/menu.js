@@ -1,18 +1,21 @@
 import React from 'react';
+import Logo from '../assets/logo.png'
 
 export default function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href='/#'>Boletos</a>
-            <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav">
-                    <li className="nav-item active">
-                        <a className="nav-link" href='/#'>Listar</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href='/Create'>Criar</a>
-                    </li>
-                </ul>
+        <nav class="navbar navbar-default banner">
+            <div class="navbarPrincipal">
+                <div class="navbar-header">
+                    <img src={Logo} alt='Logo SUC'></img>
+                </div>
+
+                <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-right navbar-nav-primary">
+                        <li className='navlink'><a className='homelink' href="/">Home</a></li>
+                        <li className='navlink'><a href="/">Listar</a></li>
+                        <li className='navlink'><a href="/create">Criar Boleto</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     )
