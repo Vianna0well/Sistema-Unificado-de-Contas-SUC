@@ -39,12 +39,14 @@ export default function List() {
                                 <tbody>
                                 {bills.map(bill => {
 
-                                     
+                                     const regex = bill.expiration_date.split('T')[0];
+                                     const regex2 = regex.split('-').reverse()
+                                     const regex3 = regex2[0].concat('/') + regex2[1].concat('/') + regex2[2].concat('');
 
                                     return(
                                         <tr key={bill._id}>
                                             <td className="column1">{bill.provider_name}</td>
-                                            <td className="column2">{bill.expiration_date}</td>
+                                            <td className="column2">{regex3}</td>
                                             <td className="column3">R${parseFloat(bill.amount).toFixed(2)}</td>
                                             <td className="column4">À pagar</td>
                                             <td className="column6"><a href={`https://megahack2020.herokuapp.com/api/download/${bill._id}`} target="_blank" rel="noopener noreferrer" >Baixar PDF</a></td>
