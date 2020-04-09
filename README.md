@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/41162196/78941460-1be29400-7a8e-11ea-9e23-fe167ab07bea.jpg" width="550">
+ </p>
+
 ## SUC - SISTEMA UNIFICADO DE CONTAS
 
 Projeto de 11 dias no Hackathon da Shawee
